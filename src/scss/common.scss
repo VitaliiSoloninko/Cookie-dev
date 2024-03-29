@@ -1,0 +1,52 @@
+// components
+.label {
+	font-size: toRem(20);
+	font-family: Lena;
+	line-height: auto;
+}
+.title {
+	font-weight: 700;
+	@include adaptiveValue("font-size", 40, 30);
+	line-height: 150%;
+	&--big {
+		@include adaptiveValue("font-size", 50, 40);
+	}
+	&--small {
+		@include adaptiveValue("font-size", 30, 24);
+	}
+	&--section {
+		@include adaptiveValue("width", 700, 280);
+		@include adaptiveValue("height", 90, 50);
+		background-color: #000;
+		color: #fff;
+		@include adaptiveValue("padding-left", 160, 40);
+		@include adaptiveValue("padding-right", 160, 40);
+		@include adaptiveValue("padding-top", 21, 8);
+		@include adaptiveValue("padding-bottom", 21, 8);
+		@include adaptiveValue("font-size", 30, 24);
+	}
+	span {
+		font-family: Lena;
+	}
+}
+
+.text {
+	line-height: 170%;
+}
+.button {
+	min-width: toRem(272);
+	border: solid toRem(1) #000;
+	border-radius: toRem(3);
+	padding: toRem(11);
+	font-size: toRem(22);
+	transition: all 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #000;
+			color: #fff;
+		}
+	}
+	@media (max-width: $mobile) {
+		width: 100%;
+	}
+}
